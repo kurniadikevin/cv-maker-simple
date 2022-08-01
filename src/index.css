@@ -13,3 +13,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+  height: 100%;
+  
+  
+}
+
+.App>div{
+  border: 1px solid red;
+  
+  
+}
+
+.input-col{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  padding: 15px;
+}
+
+  .a-section>form, .b-section>form, .c-section>form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .a-section>form>div, .b-section>form>div, .c-section>form>div{
+    display: flex;
+    justify-content: right;
+    gap: 100px;
+    
+  }
+
+  .c-section{
+    padding-bottom: 10px;
+  }
+ 
+ input{
+    width: 300px;
+    height: 20px;
+ } 
+
+ #fromto-input{
+   width: 150px;
+ }
+
+ #exp-input{
+   
+ }
+
+ .cv-display{
+   display: grid;
+   grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 4fr 1fr 2fr;
+ }
