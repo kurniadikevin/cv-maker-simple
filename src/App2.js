@@ -8,32 +8,47 @@ class App2 extends React.Component {
         super();
         
         this.state={
-            name :  '',
-            email : '',
-            phone : '',
-            education :  '',
-            schoolName : '',
-            schoolYear : '',
-            experience :  '',
-            fromYear : '',
-            toYear : '',
-          
-    }}
+            update : {
+              name :  '',
+              email : '',
+              phone : '',
+              education :  '',
+              schoolName : '',
+              schoolYear : '',
+              experience :  '',
+              fromYear : '',
+              toYear : '',},
+            
+            submit : {}
+            
+            }
+
+         
+    }
     
     handleChange = (ev) =>{
         const value = ev.target.value;
-        this.setState({  
+        this.setState((prevState) => ({
+          update : {
+            ...prevState.update,
             [ev.target.name] : value
-        })
+          } 
+         })
+        )
     }
 
-    handleSubmit = () =>{}
+    handleSubmit = (e) =>{
+       e.preventDefault();
+       this.setState({
+         submit : this.state.update
+       })
+    }
 
 
 
   render(){
 
-    const { name,email,phone,education,schoolName,schoolYear,experience,fromYear,toYear} = this.state;
+    const { name,email,phone,education,schoolName,schoolYear,experience,fromYear,toYear} = this.state.submit;
 
   return (
     <div>
@@ -41,17 +56,17 @@ class App2 extends React.Component {
           <h1>CV Application</h1>
          
           <div className="a-section">
-             <form>
-            <label>Name </label>
-            <input name='name' type='text' onChange={this.handleChange}></input> <br></br>
-            <label>Email </label>
-            <input name='email' type="email" onChange={this.handleChange}></input><br></br>
-            <label>Phone </label>
-            <input name='phone'type="number" onChange={this.handleChange}></input>
-          </form>
-      </div>
+              <form>
+              <label>Name </label>
+              <input name='name' type='text' onChange={this.handleChange}></input> <br></br>
+              <label>Email </label>
+              <input name='email' type="email" onChange={this.handleChange}></input><br></br>
+              <label>Phone </label>
+              <input name='phone'type="number" onChange={this.handleChange}></input>
+              </form>
+          </div>
 
-      <div className="b-section">
+          <div className="b-section">
             <form>
               <label>Education</label>
               <input name='education' type="text" onChange={this.handleChange}></input><br></br>
@@ -62,19 +77,19 @@ class App2 extends React.Component {
             </form>
           </div>
 
-          <div className="c-section">
-        <form>
-          <label>Experience</label>
-          <input name='experience' type="text" onChange={this.handleChange}></input><br></br>
-          <label>From</label>
-          <input name='fromYear' type="month" onChange={this.handleChange}></input>
-          <label>To</label>
-          <input name='toYear' type='month' onChange={this.handleChange}></input>
-        </form>
-    </div>
-          <button>Submit</button>
-
+        <div className="c-section">
+              <form>
+                  <label>Experience</label>
+                  <input name='experience' type="text" onChange={this.handleChange}></input><br></br>
+                  <label>From</label>
+                  <input name='fromYear' type="month" onChange={this.handleChange}></input>
+                  <label>To</label>
+                  <input name='toYear' type='month' onChange={this.handleChange}></input>
+              </form>
+         </div>
+         <button onClick={this.handleSubmit}>Submit</button>
       </div>
+
       <div className="display-col">
           <Display name={name} email={email} schoolName={schoolName} />
       </div>

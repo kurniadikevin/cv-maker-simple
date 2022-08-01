@@ -7,7 +7,7 @@ const Display = (props) =>{
     
         return(
             <div>
-                <p>{name}</p>
+                <p>Name: {name}</p>
                 <p>{email}</p>
                 <p>{schoolName}</p>
             </div>
