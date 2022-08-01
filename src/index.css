@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: rgb(15, 15,15);
   color: white;
 }
 
@@ -34,6 +34,7 @@ code {
   flex-direction: column;
   gap:15px;
   padding: 15px;
+  background-color: rgb(50, 50 ,50);
 }
 
   .a-section>form, .b-section>form, .c-section>form{
@@ -68,5 +69,8 @@ code {
 
  .cv-display{
    display: grid;
+   padding: 15px;
+   padding-top: 45px;
+   justify-content: center;
    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 4fr 1fr 2fr;
  }
