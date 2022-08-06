@@ -109,7 +109,7 @@ class App2 extends React.Component {
                 </div>  
               </form>
          </div>
-         <div>
+         <div className="button-cont">
               <button onClick={this.handleSubmit}>Submit</button>
          </div>
       </div>
