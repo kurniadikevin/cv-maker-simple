@@ -72,11 +72,17 @@ code {
    padding: 15px;
    padding-top: 45px;
    justify-content: center;
-   grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 4fr 1fr 2fr;
+   grid-template-rows: repeat(8,50px);
  }
 
  .cv-display>div{
+  display: grid;
+  grid-template-columns: 200px auto;
   
+ }
+
+ #exp{
+  height: auto;
  }
  .title{
   font-weight: 800;
