@@ -24,7 +24,6 @@ code {
 }
 
 .App>div{
-  border: 1px solid red;
   
   
 }
@@ -69,9 +68,16 @@ code {
  }
 
  .cv-display{
-   display: grid;
+   display: none;
    padding: 15px;
    padding-top: 45px;
    justify-content: center;
    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 4fr 1fr 2fr;
+ }
+
+ .cv-display>div{
+  
+ }
+ .title{
+  font-weight: 800;
  }

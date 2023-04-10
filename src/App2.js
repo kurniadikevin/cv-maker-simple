@@ -42,6 +42,8 @@ class App2 extends React.Component {
        this.setState({
          submit : this.state.update
        })
+       const displayDiv= document.querySelector('.cv-display');
+       displayDiv.style.display='grid';
     }
 
 
@@ -53,7 +55,7 @@ class App2 extends React.Component {
   return (
     <div className='App'>
       <div className="input-col">
-          <h1>CV Application</h1>
+          <h1>CV Maker App</h1>
          
           <div className="a-section">
               <form>
